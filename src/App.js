@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
 import usePersistedState from "./utils/usePersistedState";
@@ -20,16 +21,21 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
+        {console.log("theme", theme)}
         <div
           className="App"
-          style={{ width: "100%", height: "100vh", minHeight: "100vh" }}
+          style={{
+            background: `${theme.background}`,
+          }}
         >
-          <Router>
-            <ToastContainer />
-            <GlobalStyles />
-            <Nav toggleTheme={toggleTheme} />
-            <Links />
-          </Router>
+          <div className="container">
+            <Router>
+              <ToastContainer />
+              <GlobalStyles />
+              <Nav toggleTheme={toggleTheme} />
+              <Links />
+            </Router>
+          </div>
         </div>
       </>
     </ThemeProvider>

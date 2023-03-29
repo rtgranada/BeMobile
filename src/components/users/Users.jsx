@@ -9,7 +9,7 @@ import Designer from "../../assets/imgs/designer.png";
 
 const Main = styled.div`
   width: 100%;
-  padding: 10px 20px 0px;
+  // padding: 10px 20px 0px;
 `;
 
 const columns = {

@@ -23,6 +23,6 @@ body {
     font-size: 14px;
     color: ${(props) => props.theme.colors.text};    
     font-family: sans-serif;
-    transition: 1s;
+    transition: background 1s;
 }
 `;

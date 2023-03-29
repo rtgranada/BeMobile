@@ -9,8 +9,10 @@ const Main = styled.div`
 `;
 
 const T = styled.table`
-  width: 80%;
+  width: 100%;
+  margin-top: 1rem;
   border-collapse: collapse;
+  border-radius: 1em;
   color: #686f7a;
 
   tbody:before {
@@ -25,9 +27,17 @@ const Th = styled.th`
   text-align: ${(props) => (props.align ? props.align : "left")};
   font-size: 18px;
   color: ${(props) => props.theme.colors.text};
+  line-height: 2.6em;
   font-weight: 700;
   opacity: 0.65;
   background: ${(props) => props.theme.colors.thBg};
+  &:first-child {
+    border-radius: 10px 0 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 10px 0 0;
+  }
 
   ${(props) => props.css && css(...props.css)};
 `;
@@ -40,6 +50,10 @@ const Td = styled.td`
 
 const Tr = styled.tr`
   border-bottom: 2px solid ${(props) => props.theme.colors.text};
+  &:last-child {
+    border-bottom: none;
+  }
+
   ${(props) => props.css && css(...props.css)};
 `;
 

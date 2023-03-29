@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   width: 100%;
   //height: 90vh;
-  background: ${(props) => props.theme.colors.primary};
+  //background: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,7 +21,7 @@ export const Container = styled.div`
     width: 100%;
     //min-height: 100%;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     color: ${(props) => props.theme.colors.text};
   }
 `;
