@@ -25,11 +25,8 @@ const T = styled.table`
     }
   }
 
-  tbody:before {
-    content: "-";
-    display: block;
-    line-height: 0.6em;
-    color: transparent;
+  tbody {
+    background: white;
   }
 `;
 
