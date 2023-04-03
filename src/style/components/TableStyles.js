@@ -26,7 +26,8 @@ const T = styled.table`
   }
 
   tbody {
-    background: white;
+    background: ${(props) => props.theme.colors.tBodyBkGr};
+    transition: 1s;
   }
 `;
 
@@ -117,67 +118,71 @@ const Others = styled.div`
 
 const UserTableRow = ({ user, props }) => {
   const [expan, setExpan] = useState(null);
+  let body = (
+    <Tr
+      key={user[props?.uniqueKey]}
+      css={props?.css}
+      onClick={() => {
+        return setExpan(!expan);
+      }}
+    >
+      {Object.keys(props?.columns).map((key) => {
+        return (
+          <Td
+            key={key}
+            alignTd={`center`}
+            alignTh={`center`}
+            width={props?.columns[key].width}
+            css={props?.columns[key].css}
+            hideOnDesktop={props?.columns[key].hideOnDesktop}
+            hideOnTablet={props?.columns[key].hideOnTablet}
+            hideOnPhone={props?.columns[key].hideOnPhone}
+            showOnTablet={props?.columns[key].showOnTablet}
+            showOnPhone={props?.columns[key].showOnPhone}
+            style={props?.columns[key].styling}
+          >
+            {props?.columns[key].content
+              ? props?.columns[key].content(user, expan)
+              : user[key]}
+          </Td>
+        );
+      })}
+    </Tr>
+  );
+
+  let expansiveTr = (
+    <Tr
+      className="expandable"
+      key={user[props?.uniqueKey]}
+      style={{ border: "none" }}
+    >
+      <td colSpan={5} key={user[props?.uniqueKey]}>
+        <Others key={user[props?.uniqueKey]}>
+          <div className="rowItens">
+            <h3 className="title">Cargo</h3>
+            <span>{user.ocupation}</span>
+          </div>
+          <div className="rowItens">
+            <h3 className="title">Data de admissão</h3>
+            <span>{user.joinDate}</span>
+          </div>
+          <div className="rowItens">
+            <h3 className="title">Telefone</h3>
+            <span>{user.phone}</span>
+          </div>
+        </Others>
+      </td>
+    </Tr>
+  );
 
   return (
-    <>
-      {user && (
-        <>
-          <Tr
-            key={user[props?.uniqueKey]}
-            css={props?.css}
-            onClick={() => {
-              return setExpan(!expan);
-            }}
-          >
-            {Object.keys(props?.columns).map((key) => {
-              return (
-                <Td
-                  key={key}
-                  alignTd={`center`}
-                  alignTh={`center`}
-                  width={props?.columns[key].width}
-                  css={props?.columns[key].css}
-                  hideOnDesktop={props?.columns[key].hideOnDesktop}
-                  hideOnTablet={props?.columns[key].hideOnTablet}
-                  hideOnPhone={props?.columns[key].hideOnPhone}
-                  showOnTablet={props?.columns[key].showOnTablet}
-                  showOnPhone={props?.columns[key].showOnPhone}
-                  style={props?.columns[key].styling}
-                >
-                  {props?.columns[key].content
-                    ? props?.columns[key].content(user, expan)
-                    : user[key]}
-                </Td>
-              );
-            })}
-          </Tr>
-          {expan && (
-            <Tr
-              className="expandable"
-              key="tr-expander"
-              style={{ border: "none" }}
-            >
-              <td colSpan={5} key={user[props?.uniqueKey]}>
-                <Others key={user[props?.uniqueKey]}>
-                  <div className="rowItens">
-                    <h3 className="title">Cargo</h3>
-                    <span>{user.ocupation}</span>
-                  </div>
-                  <div className="rowItens">
-                    <h3 className="title">Data de admissão</h3>
-                    <span>{user.joinDate}</span>
-                  </div>
-                  <div className="rowItens">
-                    <h3 className="title">Telefone</h3>
-                    <span>{user.phone}</span>
-                  </div>
-                </Others>
-              </td>
-            </Tr>
-          )}
-        </>
-      )}
-    </>
+    user &&
+    body && (
+      <>
+        {body}
+        {expan && expansiveTr}
+      </>
+    )
   );
 };
 
@@ -261,6 +266,7 @@ const Table = ({
           {data?.users?.map((i, index) => {
             return isMobile ? (
               <UserTableRow
+                key={index + 1}
                 props={{ css, uniqueKey, columns }}
                 index={index + 1}
                 user={i}
