@@ -15,15 +15,15 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre o projeto](#-sobre-o-projeto)
-   * [Funcionalidades](#-funcionalidades)
+   * [Funcionalidades](#-Funcionalidades)
    * [Layout](#-layout)
      * [Mobile](#mobile)
      * [Web](#web)
    * [Como executar o projeto](#-como-executar-o-projeto)
      * [Pré-requisitos](#pré-requisitos)
-     * [Rodando o Backend (servidor)](#user-content--rodando-o-backend-servidor)
-     * [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
-   * [Como contribuir no projeto](#-como-contribuir-no-projeto)
+     * [Rodando o Backend (servidor)](#-rodando-o-backend-servidor)
+     * [Rodando a aplicação web (Frontend)](#-rodando-a-aplicação-web-frontend)
+   * [Tecnologias](#-tecnologias)
    * [Autor](#-autor)
 <!--te-->
 
@@ -39,8 +39,7 @@ Desenvolvido um projeto para testar conhecimentos em React.
   - [x] Cargo
   - [x] Nome
   - [x] Telefone
-
-- [x] Os usuários podem alterar o thema para claro e preto.
+- [x] Os usuários podem alterar o thema para claro e escuro.
 ---
 
 ## 🎨 Layout
@@ -68,9 +67,9 @@ Desenvolvido um projeto para testar conhecimentos em React.
 
 ## 🚀 Como executar o projeto
 
-Este projeto é divido em três partes:
-1. Backend (pasta server) 
-2. Frontend (pasta web)
+Este projeto é divido em duas partes:
+1. Backend [Back](https://github.com/rtgranada/BeMobileJsonServer) 
+2. Frontend (Este projeto)
 
 💡O Frontend precisa que o Backend esteja sendo executado para funcionar.
 
@@ -80,7 +79,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-#### 🎲 Rodando o Backend (servidor)
+### 🎲 Rodando o Backend (servidor)
 
 ```bash
 
@@ -102,7 +101,7 @@ $ yarn json-server --watch server.json
 
 
 
-#### 🧭 Rodando a aplicação web (Frontend)
+### 🧭 Rodando a aplicação web (Frontend)
 
 ```bash
 
@@ -133,7 +132,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 -   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[React Toastify](https://fkhadra.github.io/react-toastify/introduction)**
 -   **[Axios](https://github.com/axios/axios)**
+-   **[Styled Components](https://styled-components.com/)**
+-   **[Styled Icons](https://styled-icons.dev/)**
 
 > Veja o arquivo  [package.json](https://github.com/rtgranada/BeMobile/blob/main/package.json)
 ---
