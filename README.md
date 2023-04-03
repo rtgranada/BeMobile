@@ -23,14 +23,8 @@ Tabela de conteúdos
      * [Pré-requisitos](#pré-requisitos)
      * [Rodando o Backend (servidor)](#user-content--rodando-o-backend-servidor)
      * [Rodando a aplicação web (Frontend)](#user-content--rodando-a-aplicação-web-frontend)
-   * [Tecnologias](#-tecnologias)
-     * [WebSite](#user-content-website--react----typescript)
-     * [Server](#user-content-server--nodejs----typescript)
-     * [Mobile](#user-content-mobile--react-native----typescript)
-   * [Contribuidores](#-contribuidores)
    * [Como contribuir no projeto](#-como-contribuir-no-projeto)
    * [Autor](#-autor)
-   * [Licença](#user-content--licença)
 <!--te-->
 
 
@@ -43,7 +37,7 @@ Desenvolvido um projeto para testar conhecimentos em React.
 
 - [x] Pode ser filtardo os usuários por:
   - [x] Cargo
-  - [x] Nome e
+  - [x] Nome
   - [x] Telefone
 
 - [x] Os usuários podem alterar o thema para claro e preto.
@@ -152,8 +146,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <br />
  <sub><b>Rodrigo Granada</b></sub></a> <a href="https://github.com/rtgranada/" title="Rocketseat">🚀</a>
  <br />
-
-[![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/tgmarinho/) 
-[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:tgmarinho@gmail.com)
 
 ---
