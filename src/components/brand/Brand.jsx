@@ -6,10 +6,6 @@ const Brand = (props) => {
   return (
     <Logo>
       <img src={BeMobileLogo} alt="Logo" />
-      {/* <div>
-        <p>Be</p>
-      </div>
-      <p>mobile</p> */}
     </Logo>
   );
 };

@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import Avatar from "../../style/components/AvatarStyles";
-import { toast } from "react-toastify";
 import Table from "../../style/components/TableStyles";
 import Front from "../../assets/imgs/front.png";
 import Back from "../../assets/imgs/back.png";
 import Designer from "../../assets/imgs/designer.png";
+import DirectionIcon from "../../style/components/DirectionIcon";
+import DotIcon from "../../style/components/SingleDot";
 
 const Main = styled.div`
   width: 100%;
-  // padding: 10px 20px 0px;
 `;
 
 const columns = {
   picture: {
     key: "picture",
     label: "Foto",
+    width: 100,
+    alignTh: "center",
+    alignTd: "center",
     content: (item) => (
       <Avatar
         name={item.name}
@@ -33,37 +36,58 @@ const columns = {
   name: {
     key: "name",
     label: "Nome",
+    width: 200,
+    alignTh: "left",
+    alignTd: "left",
   },
   ocupation: {
     key: "ocupation",
     label: "Cargo",
+    alignTh: "start",
+    width: 70,
+    hideOnTablet: true,
+    hideOnPhone: true,
   },
 
   joinDate: {
     key: "joinDate",
     label: "Data de admissão",
-    align: "center",
+    alignTh: "center",
+    alignTd: "center",
+    width: 200,
+    hideOnTablet: true,
+    hideOnPhone: true,
   },
   phone: {
     key: "phone",
     label: "Telefone",
-    align: "center",
-    width: 100,
+    alignTh: "center",
+    alignTd: "center",
+    width: 190,
+    hideOnTablet: true,
+    hideOnPhone: true,
+  },
+  actions: {
+    key: "actions",
+    label: { content: <DotIcon /> },
+    alignTh: "center",
+    alignTd: "center",
+    showOnPhone: true,
+    showOnTablet: true,
+    hideOnDesktop: true,
+    styling: { margin: "auto", display: "block", lineHeight: "49px" },
+    content: (item, active) => {
+      return <DirectionIcon active={active} size={18} />;
+    },
   },
 };
 
 const rowConfig = {
   uniqueKey: "id",
   css: `
-    height: 73px;
-    &:hover {
-      background-color: rgba(216, 216, 216, 0.2)};
-    }
+    height: 60px;
+    
   `,
-  onClick: (e, item) => {
-    toast.success(`Usuário: ${item.name}, Ocupação: ${item.ocupation}`);
-    console.log("cliquei na linha:", item);
-  },
 };
 
 const Users = (users) => {

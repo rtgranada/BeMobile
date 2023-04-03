@@ -8,6 +8,7 @@ export default {
     text: "#1C1C1C",
     inputTxt: "#6e675f",
     inputBg: "rgb(255,255,255)",
+    thTxt: "#FFFFFF",
     thBg: "#5984C0",
   },
 };

@@ -21,7 +21,6 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        {console.log("theme", theme)}
         <div
           className="App"
           style={{

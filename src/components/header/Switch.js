@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SwitchDark } from "../../style/components/SwitchDark";
-// import "./Switch.css";
 
 function Switch({ toggleTheme, isDarkTheme }) {
   const [isToggled, setIsToggled] = useState(isDarkTheme);

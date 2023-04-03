@@ -37,7 +37,7 @@ const Home = () => {
     <>
       <Container>
         <nav>
-          <h3>Funcionários</h3>
+          <h4>Funcionários</h4>
 
           <SearchBox>
             <input
